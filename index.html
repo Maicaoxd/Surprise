@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>3 Anos de Amor</title>
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #fff9f9; color: #333; }
+    .container { padding: 1rem; max-width: 480px; margin: auto; }
+    h1 { font-size: 2rem; text-align: center; margin-bottom: 1rem; color: #d6336c; }
+    .declaration { font-size: 1.1rem; line-height: 1.6; margin: 1rem 0; text-align: center; }
+    .spotify-embed { margin: 1.5rem auto; display: flex; justify-content: center; }
+    /* Swiper */
+    .swiper-container { width: 100%; height: auto; border-radius: 1rem; overflow: hidden; }
+    .swiper-slide img { width: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>3 Anos Juntos ❤️</h1>
+
+    <!-- Carousel de Fotos -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Substitua src pelos caminhos das suas imagens -->
+        <div class="swiper-slide"><img src="img/foto1.jpg" alt="Nossa Foto 1"></div>
+        <div class="swiper-slide"><img src="img/foto2.jpg" alt="Nossa Foto 2"></div>
+        <div class="swiper-slide"><img src="img/foto3.jpg" alt="Nossa Foto 3"></div>
+      </div>
+      <!-- Paginação -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Mensagem de Declaração -->
+    <div class="declaration">
+      <p>Meu amor,</p>
+      <p>Há três anos você entrou na minha vida e transformou cada dia em um presente.</p>
+      <p>Cada sorriso seu ilumina meu mundo, cada abraço me faz sentir em casa.</p>
+      <p>Obrigado por cada momento, por cada lembrança e por todo amor que compartilhamos.</p>
+      <p>Amo você hoje e sempre.</p>
+      <p><strong>Feliz Aniversário de Namoro!</strong></p>
+    </div>
+
+    <!-- Embed Spotify Playlist -->
+    <div class="spotify-embed">
+      <!-- Substitua YOUR_PLAYLIST_ID pelo ID da sua playlist -->
+      <iframe src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+
+  <!-- Swiper.js Script -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true }
+    });
+  </script>
+</body>
+</html>
