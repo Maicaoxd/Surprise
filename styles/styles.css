@@ -1,83 +1,120 @@
 ::-webkit-scrollbar {
     display: none;
-  }
-*{
+}
+
+* {
     margin: 0;
     padding: 0;
-    
 }
-html, body{
+
+html,
+body {
     overflow-x: hidden;
 }
-body{
 
-background: linear-gradient(to bottom, rgba(145,80,50,1) 0%, rgba(74,43,26,1) 71%);
+body {
+
+    background: linear-gradient(to bottom, rgba(145, 80, 50, 1) 0%, rgba(74, 43, 26, 1) 71%);
     height: 100%;
     background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     color: white;
     text-align: center;
 }
-header{
+
+header {
     padding: 10px;
 }
-header h1, p{
+
+header h1,
+p {
     margin: 20px;
 }
-.iFoto{
+
+.iFoto {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
 }
-.iFoto p{
+
+.iFoto p {
     position: absolute;
     color: #000;
     bottom: 0;
 }
-.pin{
+
+.iFoto.primeira p {
     position: absolute;
-    top: -10px;
-    height: 40px;
+    color: #000;
+    bottom: 60px;
 }
-.foto{
+
+#primeira {
+    padding: 10px 60px 10px 15px;
+    transform: rotate(90deg);
+}
+
+.pin {
+    position: absolute;
+    top: 60px;
+    height: 40px;
+    z-index: 1;
+}
+
+.foto {
     width: 30vw;
     background-color: white;
     padding: 15px 10px 60px 10px;
 }
-#filme{
+
+#filme {
     font-size: .7rem;
 }
-iframe{
-    border-radius:12px;
+
+iframe {
+    border-radius: 12px;
     margin-top: 30px;
 }
-.carrossel{
+
+.carrossel {
     display: flex;
     margin-top: 50px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
     gap: 30px;
     position: relative;
     width: 100%;
-  
 }
-.carrossel .iFoto{
-   animation: girar 7s linear infinite;
-   font-family: 'Caveat', cursive;
-   font-size: 2rem;
-   padding: 6px;
+
+.primeira {
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
 }
-.carrossel .heart{
+
+.carrossel .iFoto {
+    animation: girar 7s linear infinite;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    padding: 6px;
+}
+
+.carrossel .heart,
+.primeira .heart {
     height: 25px;
     margin-bottom: 0;
 }
-.carrossel img{
+
+.carrossel img {
     max-height: 350px;
     max-width: 350px;
     height: auto;
     width: auto;
 }
+
 .carrossel::-webkit-scrollbar {
     display: none;
 }
@@ -90,17 +127,18 @@ iframe{
     width: max-content;
     animation: rodar 220s linear infinite;
     gap: 30px;
-  }
+}
 
-.texto{
+.texto {
     width: 100%;
 }
-.texto p{
+
+.texto p {
     line-height: 2;
     margin: 50px;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -108,26 +146,31 @@ footer{
     margin-top: 50px;
     background-color: #1f1f1f;
 }
-footer p{
+
+footer p {
     width: 85%;
 }
 
 @keyframes rodar {
     0% {
         transform: translateX(0);
-      }
-      100% {
+    }
+
+    100% {
         transform: translateX(-100%);
-      }
+    }
 }
+
 @keyframes girar {
-    0%{
+    0% {
         transform: rotate(-2deg);
     }
-    50%{
-        transform: rotate(2deg);  
+
+    50% {
+        transform: rotate(2deg);
     }
-    100%{
-        transform: rotate(-2deg);  
+
+    100% {
+        transform: rotate(-2deg);
     }
 }
