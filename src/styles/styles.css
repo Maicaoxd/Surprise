@@ -181,14 +181,9 @@ footer {
     display: flex;
     justify-content: center;
     padding: 1rem;
-    width: 100%;
     background: #1f1f1f;
     margin-top: 50px;
     background-color: #1f1f1f;
-}
-
-footer p {
-    max-width: 85%;
 }
 
 /* 9. ANIMAÇÕES ------------------------------------------------------ */
