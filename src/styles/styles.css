@@ -46,7 +46,7 @@ p {
 }
 
 header p.texto {
-    margin: 0;
+    margin: 20px;
 }
 
 
@@ -162,7 +162,7 @@ iframe {
 
 /* 7. TEXTO ------------------------------------------------------------ */
 .texto {
-    width: 100%;
+    width: auto;
 }
 
 .texto p,
@@ -170,6 +170,10 @@ iframe {
 .texto li {
     line-height: 2;
     margin: 50px;
+}
+
+ul li {
+    list-style: none;
 }
 
 /* 8. FOOTER ---------------------------------------------------------- */

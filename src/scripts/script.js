@@ -1,4 +1,6 @@
 // 1. SPOTIFY IFRAME API --------------------------------------
+let spotifyController = null;
+
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
   IFrameAPI.createController(
     document.getElementById('spotify-player'),
@@ -8,17 +10,33 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
       height: '100'
     },
     (controller) => {
-      // aguarda o player ficar pronto
+      spotifyController = controller;
+
+      // 1) tenta tocar assim que o player estiver pronto
       controller.addListener('ready', () => {
         try {
-          controller.play();  // pode falhar se autoplay bloqueado
+          controller.play();
         } catch (err) {
-          console.warn('Não foi possível autoplay:', err);
+          console.warn('Autoplay bloqueado no ready():', err);
         }
       });
     }
   );
 };
+
+// Função que tenta tocar novamente após interação
+function tentarPlay() {
+  if (!spotifyController) return;
+
+  try {
+    spotifyController.play();
+    // Remover ambos os listeners após sucesso
+    document.removeEventListener('click', tentarPlay);
+    document.removeEventListener('scroll', tentarPlay);
+  } catch (err) {
+    console.warn('Ainda não foi possível tocar:', err);
+  }
+}
 
 // 2. MONTAR CARROSSEL INFINITO -------------------------------
 function montarCarrossel(items) {
@@ -48,6 +66,9 @@ function montarCarrossel(items) {
   items.forEach(i => linha.appendChild(criaSlide(i)));
   items.forEach(i => linha.appendChild(criaSlide(i)));
 }
+
+document.addEventListener('click', tentarPlay, { once: true });
+document.addEventListener('scroll', tentarPlay, { once: true });
 
 // 3. INICIALIZAÇÃO QUANDO DOM PRONTO -------------------------
 document.addEventListener('DOMContentLoaded', () => {
