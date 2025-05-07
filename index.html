@@ -9,61 +9,81 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./src/styles/styles.css">
     <title>Surpresa</title>
 </head>
 
 <body>
+
     <header>
-        <h1 id="dias"></h1>
+        <h1>Feliz 3 anos juntos🫀</h1>
         <div class="iFoto primeira">
-            <img src="./assets/img/pin.png" class="pin">
+            <img src="./src/assets/img/pin.png" class="pin" alt="pin" />
             <img id="primeira" class="foto"
                 src="https://lh3.googleusercontent.com/pw/AP1GczNCycV-TAgxgO-Bik-k7nqcswEeaOS_fuRQkEF2ExNenrhq2veB-6qvMbTQO4S6xOfb6YCM7ydbZDoklIp-wpYn9PxsnuduTu5muLgyMhgmZa9664iDkCVSp_SYSbl7MQ7m128uxiBGb5OwRm_XUAfo=w683-h911-s-no-gm?authuser=0"
-                alt="Primeira">
-            <p>03/06/23 <img src="./assets/img/heart.png" class="heart" alt=""></p>
+                alt="Primeira foto">
+            <p>03/06/23 <img src="./src/assets/img/heart.png" class="heart" alt="❤️"></p>
         </div>
-        <p id="equivale">Você é a única que tira os meus sorrisos mais sinceros</p>
+        <p class="texto">Você é a única capaz de arrancar os meus sorrisos mais genuínos.</p>
     </header>
 
-    <iframe src="https://open.spotify.com/embed/playlist/1tXnKgVzgTfkyAronlr2AL?utm_source=generator" width="80%"
-        height="100" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <!-- Player do Spotify -->
+    <div id="spotify-player" class="player-spotify"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        <!-- Fallback se API não carregar -->
+        <iframe src="https://open.spotify.com/embed/playlist/1tXnKgVzgTfkyAronlr2AL?utm_source=generator" width="80%"
+            height="100" frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
 
+    <!-- Carrossel Infinito -->
     <div class="carrossel">
         <div class="carrossel-linha">
         </div>
     </div>
 
     <div class="texto">
-        <p>
-            No momento que escrevo isso, estamos completando dois anos juntos, dois anos da minha melhor escolha, dois
-            anos do estalo na minha mente de pensar "Quer saber? Não quero passar nem mais um minuto sem poder chamar
-            ela de minha mulher" e te pedir em namoro mesmo sem aliança que era o plano inicial, mais de dois anos sendo
-            completamente e perdidamente apaixonado por você, pela sua essencia, pelo seu jeito, pelo seu cheiro, pelo
-            arrepio que sinto quando minha pele toca a sua, pelo seu sorriso que me motiva a fazer piada de tudo só pra
-            ver ele mais uma vez, pelas suas piadas sem graça, por tudo que você é, por tudo que você representa, por
-            tudo que você faz, por tudo que você me faz sentir, por tudo que me faz querer ser. São dois anos juntos que
-            parecem uma vida, e me fazem querer uma vida inteira ao seu lado, faltam musicas e declarações no mundo para
-            descrever o quanto eu te amo e quero estar com você, "Todas as horas que o tempo tem pra me conceder são
-            tuas até morrer", "Tudo que é amor, parece com você", "Você é algo assim , é tudo pra mim", toda a Velha
-            Infância dos Tribalistas, são pouco para expressar o que eu sinto por você. <br /><br />
-            Você é tudo que eu sempre quis, tudo que eu quero e tudo que vou querer, você e somente você, o meu ultimo
-            pensamento antes de dormir e primeiro ao acordar, o motivo do meu riso bobo no meio do dia, o motivo de eu
-            dar o meu melhor a cada dia em tudo que eu faço, você me faz querer ser uma pessoa melhor, um homem melhor,
-            um namorado melhor, um amigo e companheiro melhor, você traz o melhor de mim, espero conseguir te fazer tão
-            feliz quanto você me faz, você merece tudo de melhor que o mundo possa proporcionar, e meu objetivo é
-            aproveitar tudo isso ao seu lado. <br /> <br />
-            Que venha todo o futuro, temos muito a viver juntos, muito a conquistar, muito a aprender. Quero te ter
-            comigo a cada passo que eu der e quero estar contigo a cada passo que você der, te amo e sempre vou amar.
-        </p>
+        <p>Oi, meu amor,</p>
+
+        <p>Este singelo presente nasceu do desejo de eternizar um pedaço do nosso amor. Cada foto, cada data, cada
+            palavra aqui reunida reflete os momentos mais especiais que construímos nestes três anos juntos. Meu coração
+            transborda de carinho só de pensar em tudo o que vivemos — por isso quis transformar essa página em memória,
+            hospedada para sempre no GitHub (ou até a empresa falir!), como um símbolo duradouro da nossa história.</p>
+
+        <p>Se eu pudesse resumir este período em uma palavra, seria <strong>gratidão</strong>:</p>
+        <ul>
+            <li>Gratidão por ter te conhecido e por, desde então, me ajudado a crescer.</li>
+            <li>Gratidão por cada gesto de entrega e cada demonstração de carinho que me tornaram uma versão melhor de
+                mim mesmo.</li>
+            <li>Gratidão pelo companheirismo diário e por cada sorriso que você tirou de mim.</li>
+        </ul>
+
+        <p>Você é única, rara e especial — não existe ninguém como você neste mundo.</p>
+
+        <p>Este último ano foi especialmente marcante: começamos a dar forma ao nosso sonho de viver juntos em nosso
+            próprio apartamento. Lembro quando parecia impossível reunir forças suficientes para dar esse passo… e aqui
+            estamos, pagando as prestações e aguardando as chaves, mais cedo do que eu jamais imaginei. Já vejo
+            daqui a dois anos nós dois, de aliança no dedo, no nosso lar, com nosso filho correndo pelos cômodos,
+            celebrando cada conquista ao nosso lado.</p>
+
+        <p>Obrigado por ser quem você é, por cada pedaço do seu ser que compartilha comigo. Você é incrível, minha
+            linda.</p>
+
+        <p><strong>Eu te amo hoje e sempre. ❤️</strong></p>
+
     </div>
+
     <footer>
         <p>
-            Feito com muito ❤️ pelo seu homem, seu namorado, seu amor, seu futuro esposo, seu eterno fã, seu eterno
-            admirador, seu eterno amigo e companheiro. <br /><br />Eu te amo ❤️</p>
+            Feito com todo o meu amor, pelo seu homem, namorado, futuro esposo, amigo leal e eterno admirador.
+            <br>
+            <br>
+            Eu te amo hoje e sempre, minha princesa. ❤️
+        </p>
     </footer>
+
+    <script src="./src/scripts/script.js"></script>
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 </body>
 
 </html>
